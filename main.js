@@ -1,11 +1,11 @@
 const colors = {
 	RED    : '#ff0000',
-	ORANGE : '#ff7f00',
+	ORANGE : '#f59c03',
 	YELLOW : '#ffff00',
-	GREEN  : '#37780c',
+	GREEN  : '#3cef1f',
 	BLUE   : '#0000ff',
 	INDIGO : '#4b0082',
-	PURPLE : '#9400d3',
+	PURPLE : '#f503e3',
 	WHITE  : '#fefefe',
 	GREY   : '#8c8c8c',
 	BLACK  : '#000000'
@@ -28,9 +28,10 @@ function gridFill(x, y) {
 }
 
 function fillAll() {
-	for (let x = 0; x < cW; x++) {
-		for (let y = 0; y < cH; y++) {
-			gridFill(x, y);
+	for (let x = 0; x <= gridSize; x++) {
+		for (let y = 0; y <= gridSize; y++) {
+			console.log(x * gridSize, y * gridSize);
+			gridFill(x * gridSize, y * gridSize);
 		}
 	}
 }
@@ -82,7 +83,7 @@ function setup() {
 	
 	// Set stroke properties
 	stroke(0, 0, 0);
-	strokeWeight(1);
+	strokeWeight(2);
 
 	// Disable the border around each "stroke"
 	// noStroke();

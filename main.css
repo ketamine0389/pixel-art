@@ -69,4 +69,6 @@ main > p {
 	margin-top: 1em;
 	position: relative;
 	left: 3.5em;
+	margin: auto;
+	width: 75%;
 }
